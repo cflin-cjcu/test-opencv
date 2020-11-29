@@ -25,7 +25,7 @@ for k, d in enumerate(face_rects):
   cv2.rectangle(img, (x1, y1), (x2, y2), (0, 255, 0), 4, cv2.LINE_AA)
   shape = landmark_predictor(img,d)
   for i in range(68):
-      cv2.circle(img, (shape.part(i).x, shape.part(i).y),5,(0,255,0), -1, 8)
+      cv2.circle(img, (shape.part(i).x, shape.part(i).y),5,(0,0,255), -1, 2)
       cv2.putText(img,str(i),(shape.part(i).x,shape.part(i).y),cv2.FONT_HERSHEY_SIMPLEX,0.5,(255,2555,255))
 
 # 顯示結果
